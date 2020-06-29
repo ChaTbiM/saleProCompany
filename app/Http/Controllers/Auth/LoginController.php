@@ -28,6 +28,12 @@ class LoginController extends Controller
      */
     protected $redirectTo = '/';
 
+    public function showLoginForm()
+    {
+        return redirect()->away('http://127.0.0.1:8000/');
+
+    }
+
     public function credentials(Request $request)
     {
         $credentials = $request->only($this->username(), 'password');

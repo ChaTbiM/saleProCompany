@@ -17,7 +17,7 @@ use Illuminate\Http\Request;
 Auth::routes();
 
 
-Route::group(['middleware' => 'auth','belongsToCompany'], function () {
+Route::group(['middleware' => 'auth'], function () {
 	Route::get('/dashboard', 'HomeController@dashboard');
 });
 

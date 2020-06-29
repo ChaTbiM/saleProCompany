@@ -18,7 +18,7 @@ class belongsToCompany
     {
 
         if (!Auth::check()) {
-            return redirect()->away('http://127.0.0.1:8000/');
+            return redirect()->away('http://127.0.0.1:8000/login');
         }
 
         $company_name = \App\GeneralSetting::find(1)->site_title; // 
